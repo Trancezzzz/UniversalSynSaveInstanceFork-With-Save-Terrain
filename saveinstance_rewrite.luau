@@ -3019,7 +3019,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 		return prop_list
 	end
 
-	local CHUNK_LIMIT = 200 * 1024 * 1024 -- string length overflow prevention
+	local CHUNK_LIMIT = 32 * 1024 * 1024 -- string length overflow prevention
 	local function save_cache(final)
 		local savestr = table.concat(savebuffer)
 		currentstr ..= savestr -- TODO: Causes "not enough memory" error on some exec
